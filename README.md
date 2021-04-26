@@ -1,30 +1,27 @@
-# safeStringify
-
-Replace ```JSON.stringify``` with ```safeStringify``` to stringify circular objects.  
-safely stringify objects to json format  
-and discard duplicate references to prevent loops  
+# timeunit
 
 ## install
 
 ```
-npm i @yehonadav/safestringify
+npm i @yehonadav/timeunit
 ```
+
+stop using syntax ```const wait = 24 * 60 * 60 * 1000``` to represent time units.  
+use a time unit instead: 
 
 ## usage
 
 ```typescript
-import {safeStringify} from "safestringify"
+import {seconds} from "@yehonadav/timeunit"
 
-const a = {};
-a.a = a;
-a.b = 'b';
+function sleep(milliseconds) {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+    .then(() => {
+      console.log(`waited ${milliseconds/second} seconds`)
+    })
+}
 
-console.log(safeStringify(a));
-// result:
-// {
-//   "b": "b"
-// }
-
+sleep(60 * seconds)
 ```
 
 enjoy =)  

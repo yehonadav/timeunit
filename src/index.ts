@@ -1,8 +1,8 @@
-export const millisecond = 1;
-export const second = 1000;
-export const minute = 60000;
-export const hour = 3600000;
-export const day = 86400000;
-export const week = 604800000;
-export const month = 2592000000;
-export const year = 31536000000;
+export const milliseconds = 1;
+export const seconds = 1000;
+export const minutes = 60000;
+export const hours = 3600000;
+export const days = 86400000;
+export const weeks = 604800000;
+export const months = 2592000000;
+export const years = 31536000000;
